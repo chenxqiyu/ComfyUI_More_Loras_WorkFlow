@@ -1,8 +1,8 @@
 # ComfyUI_More_Loras_WorkFlow
 多lora堆循环输入：
-<img width="1862" height="667" alt="image" src="https://github.com/user-attachments/assets/8f2ec965-56cd-4878-992d-6741d91fa50d" />
+<img width="3666" height="1278" alt="image" src="https://github.com/user-attachments/assets/dce7a307-f33c-431d-ab7f-82879ac53c6d" />
 多lora循环输入：
-<img width="1868" height="699" alt="image" src="https://github.com/user-attachments/assets/2b2983e4-3334-470e-bb6e-2bdd3f20507c" />
+<img width="3576" height="1219" alt="image" src="https://github.com/user-attachments/assets/9a67c947-97b1-4fdd-9143-bc12829ed0ca" />
 文本列表字符串循环输入:
-<img width="1868" height="697" alt="image" src="https://github.com/user-attachments/assets/4aced6d5-8fd6-4ce0-8557-9339842b22f6" />
+<img width="3592" height="1214" alt="image" src="https://github.com/user-attachments/assets/9b1b6bc4-cdf4-42b7-b8d6-8ecaee6a4bfc" />
 
