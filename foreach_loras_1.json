@@ -1,0 +1,773 @@
+{
+  "id": "7722ae64-8ac5-4e2f-bb36-580ab8cfc718",
+  "revision": 0,
+  "last_node_id": 75,
+  "last_link_id": 128,
+  "nodes": [
+    {
+      "id": 54,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -2439.091227643653,
+        8459.598768814041
+      ],
+      "size": [
+        270,
+        342
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LoRA堆",
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": 124
+        },
+        {
+          "name": "lora_name_1",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name_1"
+          },
+          "link": 114
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            125
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "sd15\\20230630\\equitation_outfit-10.safetensors",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 55,
+      "type": "easy lengthAnything",
+      "pos": [
+        -3117.5322598227663,
+        8182.2422487707345
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "any",
+          "name": "any",
+          "type": "*",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "label": "length",
+          "name": "length",
+          "type": "INT",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy lengthAnything"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 56,
+      "type": "StringListToString",
+      "pos": [
+        -3143.58843266198,
+        8300.201613529005
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "string_list",
+          "name": "string_list",
+          "type": "STRING",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "2346b677666e14ad53a6e65e16a33289a78106c7",
+        "Node name for S&R": "StringListToString"
+      },
+      "widgets_values": [
+        "\\n"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "ImpactStringSelector",
+      "pos": [
+        -2513.046506898644,
+        8120.394009809854
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "strings",
+          "type": "STRING",
+          "widget": {
+            "name": "strings"
+          },
+          "link": 94
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "widget": {
+            "name": "select"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "2346b677666e14ad53a6e65e16a33289a78106c7",
+        "Node name for S&R": "ImpactStringSelector"
+      },
+      "widgets_values": [
+        "1\n2\n3\n4\n5\n6",
+        false,
+        0,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "type": "easy forLoopEnd",
+      "pos": [
+        -2058.5710961082964,
+        8151.294680467615
+      ],
+      "size": [
+        163.08984375,
+        86
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "流",
+          "name": "flow",
+          "shape": 5,
+          "type": "FLOW_CONTROL",
+          "link": 96
+        },
+        {
+          "label": "初始值1",
+          "name": "initial_value1",
+          "shape": 7,
+          "type": "*",
+          "link": 112
+        },
+        {
+          "name": "initial_value3",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值1",
+          "name": "value1",
+          "type": "*",
+          "links": [
+            128
+          ]
+        },
+        {
+          "name": "value3",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy forLoopEnd"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 59,
+      "type": "easy forLoopStart",
+      "pos": [
+        -2852.743704798175,
+        8127.846538134071
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "初始值1",
+          "name": "initial_value1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "total",
+          "type": "INT",
+          "widget": {
+            "name": "total"
+          },
+          "link": 98
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "流",
+          "name": "flow",
+          "shape": 5,
+          "type": "FLOW_CONTROL",
+          "links": [
+            96
+          ]
+        },
+        {
+          "label": "索引",
+          "name": "index",
+          "type": "INT",
+          "links": [
+            95
+          ]
+        },
+        {
+          "label": "值1",
+          "name": "value1",
+          "type": "*",
+          "links": [
+            109
+          ]
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy forLoopStart"
+      },
+      "widgets_values": [
+        6
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 61,
+      "type": "CR Simple List",
+      "pos": [
+        -3998.970653400211,
+        8291.062419698084
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "LIST",
+          "name": "LIST",
+          "shape": 6,
+          "type": "*",
+          "links": [
+            92,
+            93
+          ]
+        },
+        {
+          "label": "show_help",
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Simple List"
+      },
+      "widgets_values": [
+        "sd\\test-lora1.safetensors\nsd\\test-lora2.safetensors",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "type": "easy showAnything",
+      "pos": [
+        -2310.654066925583,
+        8262.669081937587
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            113
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "asd"
+      ]
+    },
+    {
+      "id": 67,
+      "type": "Reroute",
+      "pos": [
+        -2682.8413779484144,
+        8545.353722070608
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": [
+            124
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 68,
+      "type": "Reroute",
+      "pos": [
+        -2048.6917627806124,
+        8557.257046918287
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "LORA_STACK",
+          "links": [
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 69,
+      "type": "Reroute",
+      "pos": [
+        -2682.97208254777,
+        8660.986435462795
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": [
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 72,
+      "type": "Reroute",
+      "pos": [
+        -1299.4022350136033,
+        8154.66220436835
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 128
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    }
+  ],
+  "links": [
+    [
+      92,
+      61,
+      0,
+      55,
+      0,
+      "*"
+    ],
+    [
+      93,
+      61,
+      0,
+      56,
+      0,
+      "STRING"
+    ],
+    [
+      94,
+      56,
+      0,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      95,
+      59,
+      1,
+      57,
+      1,
+      "INT"
+    ],
+    [
+      96,
+      59,
+      0,
+      58,
+      0,
+      "FLOW_CONTROL"
+    ],
+    [
+      98,
+      55,
+      0,
+      59,
+      1,
+      "INT"
+    ],
+    [
+      101,
+      57,
+      0,
+      62,
+      0,
+      "*"
+    ],
+    [
+      109,
+      59,
+      2,
+      67,
+      0,
+      "*"
+    ],
+    [
+      112,
+      68,
+      0,
+      58,
+      1,
+      "*"
+    ],
+    [
+      113,
+      62,
+      0,
+      69,
+      0,
+      "*"
+    ],
+    [
+      114,
+      69,
+      0,
+      54,
+      1,
+      "COMBO"
+    ],
+    [
+      124,
+      67,
+      0,
+      54,
+      0,
+      "LORA_STACK"
+    ],
+    [
+      125,
+      54,
+      0,
+      68,
+      0,
+      "*"
+    ],
+    [
+      128,
+      58,
+      0,
+      72,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1接入lora节点",
+      "bounding": [
+        -2493.2499199543167,
+        8376.120618960655,
+        372.5738899004191,
+        436.7089489574373
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "模型路径多loras堆",
+      "bounding": [
+        -3567.4573219348345,
+        8012.357913874505,
+        2209.095590470698,
+        842.6011868822434
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "0接入类型",
+      "bounding": [
+        -2717.7302980372783,
+        8503.210717497988,
+        140,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "0接入名称",
+      "bounding": [
+        -2715.931600361092,
+        8623.356284869105,
+        140,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "0接入输出类型",
+      "bounding": [
+        -2079.591223617715,
+        8513.64245046876,
+        140,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.727968621747407,
+      "offset": [
+        4085.8199273022515,
+        -7775.058264441638
+      ]
+    },
+    "frontendVersion": "1.28.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
