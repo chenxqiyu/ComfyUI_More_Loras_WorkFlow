@@ -1,0 +1,791 @@
+{
+  "id": "3c345274-4719-4cd4-89dc-e16b317840cc",
+  "revision": 0,
+  "last_node_id": 81,
+  "last_link_id": 139,
+  "nodes": [
+    {
+      "id": 55,
+      "type": "easy lengthAnything",
+      "pos": [
+        -3109.618473066761,
+        8188.573302326499
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "any",
+          "name": "any",
+          "type": "*",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "label": "length",
+          "name": "length",
+          "type": "INT",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy lengthAnything"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 56,
+      "type": "StringListToString",
+      "pos": [
+        -3135.6746459059746,
+        8306.53266708477
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "string_list",
+          "name": "string_list",
+          "type": "STRING",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "2346b677666e14ad53a6e65e16a33289a78106c7",
+        "Node name for S&R": "StringListToString"
+      },
+      "widgets_values": [
+        "\\n"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "ImpactStringSelector",
+      "pos": [
+        -2511.517017551303,
+        8142.950209005912
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "strings",
+          "type": "STRING",
+          "widget": {
+            "name": "strings"
+          },
+          "link": 94
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "widget": {
+            "name": "select"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "2346b677666e14ad53a6e65e16a33289a78106c7",
+        "Node name for S&R": "ImpactStringSelector"
+      },
+      "widgets_values": [
+        "1\n2\n3\n4\n5\n6",
+        false,
+        0,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "type": "easy forLoopEnd",
+      "pos": [
+        -2050.657309352291,
+        8157.62573402338
+      ],
+      "size": [
+        163.08984375,
+        86
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "流",
+          "name": "flow",
+          "shape": 5,
+          "type": "FLOW_CONTROL",
+          "link": 96
+        },
+        {
+          "label": "初始值1",
+          "name": "initial_value1",
+          "shape": 7,
+          "type": "*",
+          "link": 112
+        },
+        {
+          "name": "initial_value3",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值1",
+          "name": "value1",
+          "type": "*",
+          "links": [
+            99
+          ]
+        },
+        {
+          "name": "value3",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy forLoopEnd"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 59,
+      "type": "easy forLoopStart",
+      "pos": [
+        -2831.1241746212886,
+        8146.944278762268
+      ],
+      "size": [
+        270,
+        138
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "初始值1",
+          "name": "initial_value1",
+          "shape": 7,
+          "type": "*",
+          "link": 139
+        },
+        {
+          "name": "total",
+          "type": "INT",
+          "widget": {
+            "name": "total"
+          },
+          "link": 98
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "流",
+          "name": "flow",
+          "shape": 5,
+          "type": "FLOW_CONTROL",
+          "links": [
+            96
+          ]
+        },
+        {
+          "label": "索引",
+          "name": "index",
+          "type": "INT",
+          "links": [
+            95
+          ]
+        },
+        {
+          "label": "值1",
+          "name": "value1",
+          "type": "*",
+          "links": [
+            138
+          ]
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy forLoopStart"
+      },
+      "widgets_values": [
+        6
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 60,
+      "type": "easy showAnything",
+      "pos": [
+        -1748.6251946376601,
+        8172.434079834949
+      ],
+      "size": [
+        210,
+        154.91616269885617
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            136
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        ",testpromtp1,testpromtp2,testpromtp3,testpromtp4,testpromtp5,testpromtp6"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "CR Simple List",
+      "pos": [
+        -4080.711570744006,
+        8296.045013787556
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "LIST",
+          "name": "LIST",
+          "shape": 6,
+          "type": "*",
+          "links": [
+            92,
+            93
+          ]
+        },
+        {
+          "label": "show_help",
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Simple List"
+      },
+      "widgets_values": [
+        "testpromtp1\ntestpromtp2\ntestpromtp3\ntestpromtp4\ntestpromtp5\ntestpromtp6",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "type": "easy showAnything",
+      "pos": [
+        -2367.667254042388,
+        8393.927809279305
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            113
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "testpromtp6"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "Reroute",
+      "pos": [
+        -2054.7620034120423,
+        8596.682106839637
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 69,
+      "type": "Reroute",
+      "pos": [
+        -2681.82174379917,
+        8594.272178297171
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": [
+            137
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 78,
+      "type": "StringConcatenate",
+      "pos": [
+        -2518.145149640378,
+        8550.794873509503
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 138
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ",",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 80,
+      "type": "Reroute",
+      "pos": [
+        -1403.752092259385,
+        8170.81947220997
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 136
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 81,
+      "type": "PrimitiveString",
+      "pos": [
+        -3631.7204863221295,
+        8082.156189773868
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      92,
+      61,
+      0,
+      55,
+      0,
+      "*"
+    ],
+    [
+      93,
+      61,
+      0,
+      56,
+      0,
+      "STRING"
+    ],
+    [
+      94,
+      56,
+      0,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      95,
+      59,
+      1,
+      57,
+      1,
+      "INT"
+    ],
+    [
+      96,
+      59,
+      0,
+      58,
+      0,
+      "FLOW_CONTROL"
+    ],
+    [
+      98,
+      55,
+      0,
+      59,
+      1,
+      "INT"
+    ],
+    [
+      99,
+      58,
+      0,
+      60,
+      0,
+      "*"
+    ],
+    [
+      101,
+      57,
+      0,
+      62,
+      0,
+      "*"
+    ],
+    [
+      112,
+      68,
+      0,
+      58,
+      1,
+      "*"
+    ],
+    [
+      113,
+      62,
+      0,
+      69,
+      0,
+      "*"
+    ],
+    [
+      134,
+      78,
+      0,
+      68,
+      0,
+      "*"
+    ],
+    [
+      136,
+      60,
+      0,
+      80,
+      0,
+      "*"
+    ],
+    [
+      137,
+      69,
+      0,
+      78,
+      1,
+      "STRING"
+    ],
+    [
+      138,
+      59,
+      2,
+      78,
+      0,
+      "STRING"
+    ],
+    [
+      139,
+      81,
+      0,
+      59,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "文本列表字符串循环输入",
+      "bounding": [
+        -3659.8227813095023,
+        7951.53266636462,
+        2209.095590470698,
+        842.6011868822434
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "0接入字符串",
+      "bounding": [
+        -2714.781261612492,
+        8556.642027703481,
+        140,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "0接入输出类型",
+      "bounding": [
+        -2085.661464249145,
+        8553.06751039011,
+        140,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5376493812597483,
+      "offset": [
+        4107.0622115088145,
+        -7828.09214253476
+      ]
+    },
+    "frontendVersion": "1.28.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
