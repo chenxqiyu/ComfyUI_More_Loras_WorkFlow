@@ -3,3 +3,6 @@
 <img width="1862" height="667" alt="image" src="https://github.com/user-attachments/assets/8f2ec965-56cd-4878-992d-6741d91fa50d" />
 多lora循环输入：
 <img width="1868" height="699" alt="image" src="https://github.com/user-attachments/assets/2b2983e4-3334-470e-bb6e-2bdd3f20507c" />
+文本列表字符串循环输入:
+<img width="1868" height="697" alt="image" src="https://github.com/user-attachments/assets/4aced6d5-8fd6-4ce0-8557-9339842b22f6" />
+
